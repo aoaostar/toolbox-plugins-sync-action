@@ -1,0 +1,26 @@
+on: [ push ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        platform: [ ubuntu-latest ]
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Get Config
+        run:
+          cat > test/config.ini <<EOF
+          
+          ${{ secrets.TOOL_CLOUD_CONFIG }}
+          
+          EOF
+
+      - name: Sync Action
+        uses: ./
+        with:
+          config_path: ${{ github.workspace }}/test/config.ini
+          plugin_path: ${{ github.workspace }}/test/src

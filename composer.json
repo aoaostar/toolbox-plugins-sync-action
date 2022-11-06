@@ -1,0 +1,19 @@
+{
+    "name": "aoaostar/toolbox-plugins-sync-action",
+    "autoload": {
+        "psr-4": {
+            "aoaostar\\": "src/",
+            "app\\": "src/app/",
+            "plugin\\": "src/plugin/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AOAOSTAR",
+            "email": "86001674+aoaostar@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.5"
+    }
+}

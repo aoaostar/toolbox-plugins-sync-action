@@ -1,0 +1,7 @@
+.idea
+/vendor/
+composer.lock
+*.zip
+build.sh
+run.sh
+config.ini

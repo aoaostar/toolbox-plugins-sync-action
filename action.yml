@@ -1,0 +1,17 @@
+name: 'toolbox-plugins-sync-action'
+description: '同步插件到傲星工具箱云平台'
+author: 'Pluto'
+inputs:
+  config_path:
+    required: true
+    description: 'config 目录'
+  plugin_path:
+    required: true
+    description: '插件目录'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    CONFIG_PATH: ${{ inputs.config_path }}
+    PLUGIN_PATH: ${{ inputs.plugin_path }}

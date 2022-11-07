@@ -148,8 +148,7 @@ class Cloud
                     $data['link'] = str_ireplace($k, $v, $data['link']);
                     $data['file']['path'] = str_ireplace($k, $v, $data['file']['path']);
                 }
-                dd($data);
-
+                
                 $this->createPlugin($data);
                 info("[$plugin->title][$plugin->class] 新增插件成功");
                 $this->result->created++;
